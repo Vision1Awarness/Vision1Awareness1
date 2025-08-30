@@ -1,221 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vision1Awareness — Safer Spaces, Smarter Alerts</title>
-  <meta name="description" content="Vision1Awareness helps people stay safer with smart proximity detection, location-aware notifications, and privacy-first design.">
-  <link rel="icon" href="/assets/logo.png">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Vision1Awareness">
-  <meta property="og:description" content="Safer Spaces, Smarter Alerts.">
-  <meta property="og:image" content="https://vision1awareness.com/assets/logo.png">
-  <meta property="og:type" content="website">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vision1Awareness — Safer, Smarter, Always Aware</title>
+  <meta name="description" content="Vision1Awareness gives riders and drivers real‑time proximity awareness with privacy‑first design and battery‑smart location updates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --teal:#16c3b0;
-      --teal-2:#0fb09e;
-      --ink:#0f1416;
-      --charcoal:#12191c;
-      --mid:#1a2328;
-      --line:#223036;
-      --text:#e7f2f2;
-      --muted:#b7c4c4;
-      --accent:#41e0d1;
-      --shadow:0 10px 24px rgba(0,0,0,.25), 0 2px 6px rgba(0,0,0,.2);
-      --radius:18px;
+      --bg:#0c1212;            /* charcoal */
+      --bg-2:#0f1516;          /* card bg */
+      --teal:#0f6a6a;          /* brand teal */
+      --teal-2:#0d8b8b;        /* accent teal */
+      --ink:#dfe7e6;           /* near white */
+      --muted:#9fb3b1;         /* muted text */
+      --gold:#f1c857;          /* highlight */
+      --ring: 0 0 0 2px rgba(255,255,255,.06) inset, 0 0 0 1px rgba(255,255,255,.04);
+      --shadow-lg: 0 10px 35px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.25);
+      --radius: 16px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-      background: radial-gradient(1200px 800px at 70% -10%, rgba(22,195,176,0.15), transparent 60%),
-                  radial-gradient(900px 600px at -10% 20%, rgba(22,195,176,0.08), transparent 60%),
-                  var(--ink);
-      color:var(--text);
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1000px 600px at 20% -10%, rgba(13,139,139,.18), transparent),
+                  radial-gradient(900px 500px at 120% 20%, rgba(241,200,87,.10), transparent),
+                  var(--bg);
+      color:var(--ink);
     }
-    a{color:var(--teal); text-decoration:none}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:1120px;margin:0 auto;padding:28px 20px}
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 0 6px; position:sticky; top:0; background:rgba(15,20,22,.6); backdrop-filter: blur(10px); z-index:50;
-      border-bottom:1px solid var(--line);
+    a{color:inherit; text-decoration:none}
+    .container{width:min(1120px, 92vw); margin-inline:auto}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:20px 0; position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px);
     }
-    .brand{display:flex; gap:12px; align-items:center}
-    .brand img{width:42px; height:42px; border-radius:12px; border:1px solid var(--line); background:#0d1113}
-    .brand h1{font-size:18px; margin:0; letter-spacing:.3px}
-    .cta{display:flex; gap:10px; align-items:center}
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 14px; border-radius:12px; border:1px solid var(--line); background:linear-gradient(180deg, var(--charcoal), var(--mid));
-      color:var(--text);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand img{height:48px; width:auto; filter:drop-shadow(0 0 18px rgba(13,139,139,.25))}
+    .brand strong{font-weight:800; letter-spacing:.2px}
+    .nav a{padding:.6rem 1rem; border-radius:10px; color:var(--muted)}
+    .nav a:hover{background:rgba(255,255,255,.05); color:var(--ink)}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns: 1.15fr .85fr; gap:48px; align-items:center; padding:48px 0 28px}
+    .badge{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background:rgba(15,106,106,.18); color:#bfe8e6; font-size:.85rem;}
+    .hero h1{font-size: clamp(1.9rem, 2.6vw + 1.2rem, 3.2rem); line-height:1.05; margin:14px 0 10px; letter-spacing:.2px}
+    .hero p.lead{color:var(--muted); font-size:1.1rem; max-width:56ch}
+    .cta{display:flex; gap:12px; margin:22px 0 0}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:.9rem 1.1rem; border-radius:12px; font-weight:700; letter-spacing:.2px; box-shadow: var(--shadow-lg)}
+    .btn-primary{background:linear-gradient(180deg, var(--teal-2), var(--teal));}
+    .btn-primary:hover{filter:brightness(1.05)}
+    .btn-ghost{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08)}
+
+    /* Phone mockup */
+    .mockup-wrap{display:flex; justify-content:center}
+    .mockup{width:min(340px, 65vw); aspect-ratio:9/18; border-radius:32px; overflow:hidden; background:#000; box-shadow:0 30px 120px rgba(0,0,0,.6), 0 0 40px rgba(13,139,139,.25); position:relative}
+    .mockup::after{content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 2px rgba(255,255,255,.06), inset 0 0 0 1px rgba(0,0,0,.35); border-radius:32px; pointer-events:none}
+    .phone-screenshot{width:100%; height:100%; object-fit:cover}
+
+    /* Feature grid */
+    .section{padding:56px 0}
+    .section h2{font-size: clamp(1.4rem, 1.2vw + 1.1rem, 2rem); margin:0 0 18px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{background:var(--bg-2); border-radius:var(--radius); padding:18px; box-shadow:var(--ring)}
+    .card h3{margin:.1rem 0 .35rem; font-size:1.05rem}
+    .card p{color:var(--muted); margin:0}
+    .kicker{color:#bfe8e6; font-weight:600; font-size:.8rem; letter-spacing:.16em; text-transform:uppercase}
+
+    /* How it works & Roadmap */
+    .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+    .step{background:var(--bg-2); border-radius:var(--radius); padding:18px; position:relative; box-shadow:var(--ring)}
+    .step strong{display:block; margin-bottom:6px}
+
+    .footer{padding:28px 0 56px; color:var(--muted); font-size:.95rem}
+    .footer a{color:#cbe7e5}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero{grid-template-columns: 1fr;}
+      .mockup-wrap{order:-1}
     }
-    .btn:hover{border-color:#335059}
-    .btn.primary{
-      border-color:transparent;
-      background:linear-gradient(180deg, var(--teal), var(--teal-2));
-      color:#062a27; font-weight:700;
-      box-shadow: var(--shadow);
-    }
-    .hero{
-      display:grid; grid-template-columns: 1.15fr .85fr; gap:28px; align-items:center;
-      padding:38px 0 10px;
-    }
-    .card{
-      background:linear-gradient(180deg, var(--charcoal), #0f1517);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow: 0 8px 26px rgba(0,0,0,.25);
-    }
-    .hero h2{font-size:40px; line-height:1.08; margin:6px 0 10px}
-    .hero p{color:var(--muted); font-size:18px; margin:0 0 16px}
-    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:#102224; color:var(--accent); border:1px solid #1b3a3e; font-weight:600; letter-spacing:.3px}
-    .phone{
-      aspect-ratio: 9/19.5; border-radius:28px; border:1px solid var(--line); background:
-        radial-gradient(200px 160px at 30% 20%, rgba(22,195,176,.15), transparent 55%),
-        linear-gradient(180deg, #0e1417, #0a0f11);
-      position:relative; overflow:hidden;
-    }
-    .signal{
-      position:absolute; inset:auto 0 18% 0; margin:auto; width:84%; height:54%;
-      border-radius:18px; border:1px dashed #25424a; display:grid; place-items:center;
-      color:#9bcfcc; font-size:14px;
-      background:linear-gradient(180deg, rgba(22,195,176,.06), rgba(0,0,0,.0));
-    }
-    .section{padding:24px 0}
-    .grid{
-      display:grid; gap:18px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    .feat h3{margin:0 0 6px; font-size:18px}
-    .feat p{margin:0; color:var(--muted)}
-    .kicker{color:#92bdb7; font-weight:700; letter-spacing:.4px; text-transform:uppercase; font-size:13px}
-    .about{display:grid; gap:20px; grid-template-columns: .9fr 1.1fr; align-items:center}
-    .road li{margin:10px 0}
-    .footer{border-top:1px solid var(--line); margin-top:26px; padding:22px 0 44px; color:#9fb0b0; font-size:14px}
-    @media (max-width:960px){
-      .hero{grid-template-columns: 1fr; padding-top:20px}
-      .about{grid-template-columns: 1fr}
-      .grid{grid-template-columns: 1fr}
+    @media (max-width: 760px){
+      .grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
 <body>
-  <header class="wrap nav">
+  <header class="container">
     <div class="brand">
-      <img src="/assets/logo.png" alt="Vision1Awareness logo" onerror="this.style.display='none'">
-      <h1>Vision1Awareness</h1>
+      <!-- Save your glow logo as /assets/logo-glow.png -->
+      <img src="assets/logo-glow.png" alt="Vision1Awareness logo" />
+      <strong>Vision1Awareness</strong>
     </div>
-    <div class="cta">
-      <a class="btn" href="/privacy-policy.html">Privacy Policy</a>
-      <!-- Replace with your actual Play link when available -->
-      <a class="btn primary" href="#" onclick="alert('Play Store link coming soon!');return false;">Get the App</a>
-    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="card">
-        <span class="tag">Safer Spaces, Smarter Alerts</span>
-        <h2>Real-time awareness that respects your privacy.</h2>
-        <p>
-          Vision1Awareness helps you stay aware of your surroundings with
-          smart proximity detection, location-aware notifications, and
-          clear, actionable insights — all designed with a privacy-first approach.
-        </p>
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <span class="badge">Private • Battery-smart • Real-time</span>
+        <h1>Real‑time awareness that <span style="color:var(--gold)">respects your privacy</span>.</h1>
+        <p class="lead">Vision1Awareness helps riders and drivers stay alert with proximity cues, smart notifications, and low‑power location updates — all processed on‑device whenever possible.</p>
         <div class="cta">
-          <a class="btn primary" href="#" onclick="alert('Play Store link coming soon!');return false;">Download (Soon)</a>
-          <a class="btn" href="#features">Explore Features</a>
+          <!-- Replace with your Play listing once live -->
+          <a class="btn btn-primary" href="#download">Download soon on Google Play</a>
+          <a class="btn btn-ghost" href="privacy-policy.html">Privacy Policy</a>
         </div>
       </div>
-
-      <div class="phone card" aria-hidden="true">
-        <div class="signal">
-          <div>
-            <div style="font-weight:700; margin-bottom:6px;">Proximity: Clear</div>
-            <div style="opacity:.8">No alerts within your set radius</div>
-          </div>
+      <div class="mockup-wrap">
+        <div class="mockup">
+          <!-- Save your screenshot as /assets/app-screenshot.png -->
+          <img class="phone-screenshot" src="assets/app-screenshot.png" alt="Vision1Awareness app screenshot" />
         </div>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <div class="kicker">Features</div>
-      <h2 style="margin:6px 0 14px">What Vision1Awareness can do</h2>
+    <section class="section" id="features">
+      <h2>What Vision1Awareness can do</h2>
       <div class="grid">
-        <div class="card feat">
-          <h3>Proximity Detection</h3>
-          <p>Continuously monitors a configurable radius and notifies you when thresholds are crossed.</p>
-        </div>
-        <div class="card feat">
-          <h3>Smart Notifications</h3>
-          <p>Prioritized alerts with sensible defaults — no noise, just what matters when it matters.</p>
-        </div>
-        <div class="card feat">
-          <h3>Privacy-First</h3>
-          <p>Location stays on-device unless you explicitly choose to share. Transparent controls.</p>
-        </div>
-        <div class="card feat">
-          <h3>Low Power Mode</h3>
-          <p>Efficient background updates tuned to save battery without sacrificing awareness.</p>
-        </div>
-        <div class="card feat">
-          <h3>Offline Friendly</h3>
-          <p>Core features continue to work even with limited connectivity.</p>
-        </div>
-        <div class="card feat">
-          <h3>Simple Controls</h3>
-          <p>Start/Stop tracking instantly, set your radius, and view recent alert history at a glance.</p>
-        </div>
+        <article class="card">
+          <div class="kicker">Proximity Detection</div>
+          <h3>Contextual awareness</h3>
+          <p>Continuous location stream with sensible distance filters provides timely awareness without spamming alerts.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Smart Notifications</div>
+          <h3>Signals that matter</h3>
+          <p>Heads‑up alerts for critical changes; gentle haptics for routine updates to minimize distraction.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Privacy First</div>
+          <h3>Data stays with you</h3>
+          <p>No account required. Location is used for awareness and not sold or shared. See our transparent policy.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Low‑Power Mode</div>
+          <h3>Battery‑smart by design</h3>
+          <p>Adaptive accuracy and throttled sampling keep power usage low for long rides and commutes.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Offline‑friendly</div>
+          <h3>Works without data</h3>
+          <p>Core awareness logic runs on‑device so you stay informed even with weak or no connectivity.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Simple Controls</div>
+          <h3>Start • Stop • Test</h3>
+          <p>One‑tap start/stop and a Test Alert button to verify notifications anytime.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section about">
-      <div class="card">
-        <div class="kicker">Our Mission</div>
-        <h2 style="margin:6px 0 10px">Awareness that empowers, not overwhelms</h2>
-        <p style="color:var(--muted)">
-          We believe safety tech should be intuitive, respectful, and accessible.
-          Vision1Awareness focuses on clear signals, responsible data practices,
-          and purposeful design that keeps you in control.
-        </p>
-      </div>
-      <div class="card road">
-        <div class="kicker">Roadmap & Future</div>
-        <ul>
-          <li><b>Today:</b> Proximity alerts, location-aware notifications, battery-optimized updates.</li>
-          <li><b>Near term:</b> Trusted-contacts handoff, configurable alert profiles, enhanced history view.</li>
-          <li><b>Next:</b> Area intelligence (crowdsourced safety signals), wearable integrations.</li>
-          <li><b>Future:</b> Privacy-preserving incident sharing and smarter, on-device ML to reduce false positives.</li>
-        </ul>
+    <section class="section" id="how">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><strong>1. Permissions</strong><p class="muted">Enable location and notifications. We only use what’s needed for awareness.</p></div>
+        <div class="step"><strong>2. Start</strong><p>Tap <em>Start</em> to stream high‑accuracy location with a small distance filter.</p></div>
+        <div class="step"><strong>3. Get Alerts</strong><p>Receive subtle, informative notifications as conditions change.</p></div>
+        <div class="step"><strong>4. Stop Anytime</strong><p>Pause updates with one tap. Your data remains on your device.</p></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
-        <div>
-          <div class="kicker">Get Updates</div>
-          <h3 style="margin:6px 0 8px">We’re launching soon on Google Play</h3>
-          <p style="margin:0;color:var(--muted)">Check back for the download link — or reach out with questions.</p>
-        </div>
-        <div class="cta">
-          <a class="btn" href="/privacy-policy.html">Privacy Policy</a>
-          <a class="btn" href="mailto:contact@vision1awareness.com">Contact</a>
-        </div>
+    <section class="section" id="roadmap">
+      <h2>Where safety is heading</h2>
+      <div class="grid">
+        <article class="card"><h3>Group Ride Mode</h3><p>Lightweight peer awareness with privacy‑preserving beacons.</p></article>
+        <article class="card"><h3>Hazard Reporting</h3><p>Quick, anonymous pins for debris, weather, and road work.</p></article>
+        <article class="card"><h3>Wearable Haptics</h3><p>Wrist/helmet taps for eyes‑on‑the‑road awareness.</p></article>
       </div>
+    </section>
+
+    <section class="footer container">
+      <p>© <span id="year"></span> Vision1Awareness. All rights reserved. • <a href="privacy-policy.html">Privacy Policy</a></p>
+      <p>Questions? <a href="mailto:contact@vision1awareness.com">contact@vision1awareness.com</a></p>
     </section>
   </main>
 
-  <footer class="wrap footer">
-    <div>© <span id="y"></span> Vision1Awareness. All rights reserved.</div>
-  </footer>
-
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
