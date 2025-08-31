@@ -1,24 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy - Vision1Awareness</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy • Vision1Awareness</title>
+  <meta name="description" content="Privacy Policy for the Vision1Awareness mobile app."/>
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --panel:#161616;
+      --muted:#b8c3c1;
+      --text:#ffffff;
+      --teal:#00b3a4;
+      --teal-d:#009688;
+      --card:#1d1f1f;
+      --border:#272a2a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6
+    }
+    header{
+      padding:56px 20px;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(0,179,164,.25), transparent 60%),
+                  linear-gradient(135deg, var(--panel), #0b0b0b 60%);
+      border-bottom:1px solid var(--border);
+      text-align:center
+    }
+    h1{
+      margin:0 0 10px;font-size:clamp(28px,4vw,40px);
+      letter-spacing:.5px
+    }
+    header p{margin:0;color:var(--muted)}
+    main{max-width:960px;margin:40px auto;padding:0 20px}
+    .card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:16px;overflow:hidden;margin-bottom:20px
+    }
+    .card h2{
+      margin:0;padding:18px 20px;
+      font-size:clamp(18px,2.5vw,22px);
+      background:linear-gradient(90deg, rgba(0,179,164,.15), transparent);
+      border-bottom:1px solid var(--border)
+    }
+    .card .content{padding:20px}
+    p,li{color:#e8eceb}
+    a{color:var(--teal);text-decoration:none}
+    a:hover{text-decoration:underline}
+    ul{padding-left:18px;margin:8px 0}
+    .tag{
+      display:inline-block;background:rgba(0,179,164,.12);
+      color:#9ef3eb;border:1px solid rgba(0,179,164,.3);
+      padding:4px 10px;border-radius:999px;font-size:12px;margin-left:8px
+    }
+    footer{
+      margin-top:40px;padding:30px 20px;border-top:1px solid var(--border);
+      color:var(--muted);text-align:center
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy for Vision1Awareness</h1>
-  <p>Effective Date: August 29, 2025</p>
-  <p>Vision1Awareness respects your privacy. This Privacy Policy explains how we collect, use, and protect information when you use our mobile app.</p>
+  <header>
+    <h1>Privacy Policy <span class="tag">Vision1Awareness</span></h1>
+    <p>Effective date: August 30, 2025</p>
+  </header>
 
-  <h2>1. Information We Collect</h2>
-  <p>Our app may collect location data in the background to provide proximity alerts. We do not collect personally identifiable information unless voluntarily provided.</p>
+  <main>
+    <div class="card">
+      <h2>Overview</h2>
+      <div class="content">
+        <p>
+          Vision1Awareness (“we”, “our”, “us”) builds tools to enhance road safety awareness.
+          This Privacy Policy explains what data our Android app collects, how we use it, and the choices you have.
+          By using the app, you agree to this Policy.
+        </p>
+      </div>
+    </div>
 
-  <h2>2. How We Use Information</h2>
-  <p>We use location data only to power the proximity detection and alert system. We do not sell or share your data with third parties.</p>
+    <div class="card">
+      <h2>Data We Collect</h2>
+      <div class="content">
+        <ul>
+          <li><strong>Approximate &amp; Precise Location (GPS):</strong> used to enable proximity awareness and alerts while the app is running.</li>
+          <li><strong>Device Identifiers &amp; Diagnostics:</strong> basic, non-personal logs and crash data to improve reliability.</li>
+          <li><strong>Notifications:</strong> permission status and delivery (no message content is stored).</li>
+        </ul>
+        <p><em>We do not collect your name, email, contacts, photos, or messages from your device.</em></p>
+      </div>
+    </div>
 
-  <h2>3. Data Retention</h2>
-  <p>No personal data is stored on our servers. Data stays on your device unless you choose to share it.</p>
+    <div class="card">
+      <h2>How We Use Your Data</h2>
+      <div class="content">
+        <ul>
+          <li><strong>Core Functionality:</strong> compute proximity and deliver real-time safety alerts.</li>
+          <li><strong>App Improvement:</strong> analyze anonymized diagnostics and crashes to fix bugs and enhance performance.</li>
+          <li><strong>Safety &amp; Security:</strong> detect misuse and protect the service.</li>
+        </ul>
+      </div>
+    </div>
 
-  <h2>4. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy, please contact us at: <strong>thevisions1@aol.com</strong></p>
+    <div class="card">
+      <h2>Device Permissions</h2>
+      <div class="content">
+        <ul>
+          <li><strong>Location:</strong> required for GPS-based awareness features. You can change this anytime in Android Settings.</li>
+          <li><strong>Notifications:</strong> used to surface timely safety alerts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Data Sharing</h2>
+      <div class="content">
+        <p>
+          We do <strong>not</strong> sell your data. We may share limited data with:
+        </p>
+        <ul>
+          <li><strong>Service Providers:</strong> trusted partners who process diagnostics on our behalf under contractual safeguards.</li>
+          <li><strong>Legal/Compliance:</strong> if required to comply with applicable laws or protect rights and safety.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Retention</h2>
+      <div class="content">
+        <p>
+          Location data used for live awareness is processed in real time and not retained longer than necessary for the feature to function.
+          Diagnostic logs, if collected, are retained only as long as needed to analyze and resolve issues.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Security</h2>
+      <div class="content">
+        <p>
+          We apply administrative, technical, and organizational measures designed to protect data.
+          No method of transmission or storage is 100% secure, but we aim to continuously improve our safeguards.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Your Choices &amp; Controls</h2>
+      <div class="content">
+        <ul>
+          <li><strong>Permissions:</strong> manage Location and Notifications in Android Settings.</li>
+          <li><strong>Delete Data:</strong> you may request deletion of diagnostics associated with your device by contacting us.</li>
+          <li><strong>Uninstall:</strong> removing the app stops all data collection and processing on your device.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Children’s Privacy</h2>
+      <div class="content">
+        <p>
+          Our app is not directed to children under 13, and we do not knowingly collect personal data from children.
+          If you believe a child provided data, please contact us so we can delete it.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>International Users</h2>
+      <div class="content">
+        <p>
+          Your data may be processed in countries other than your own. We apply protections consistent with this Policy and applicable law.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Updates to This Policy</h2>
+      <div class="content">
+        <p>
+          We may update this Policy from time to time. Changes take effect when posted here. The “Effective date” at the top will reflect the latest version.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <div class="content">
+        <p>
+          Questions or requests (including data deletion)? Email us at
+          <a href="mailto:support@vision1awareness.com">support@vision1awareness.com</a>.
+        </p>
+        <p>
+          Postal address is not required for Google Play, but you may add one here if you choose.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Vision1Awareness • <a href="/" style="color:#9ef3eb">Home</a>
+  </footer>
 </body>
 </html>
