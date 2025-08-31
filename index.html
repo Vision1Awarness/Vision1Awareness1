@@ -1,155 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Vision1Awareness — Motorcycle Proximity Safety</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Vision1Awareness helps drivers detect nearby motorcycles using GPS-based proximity alerts to improve road safety." />
-
-  <!-- Primary theme -->
-  <meta name="theme-color" content="#0f766e" />
-
-  <!-- OG / Social -->
-  <meta property="og:title" content="Vision1Awareness — Motorcycle Proximity Safety" />
-  <meta property="og:description" content="Real-time proximity alerts that help drivers notice nearby motorcycles." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vision1awareness.com/" />
-  <meta property="og:image" content="/assets/og-card.png" />
-
-  <!-- Icons / Manifest -->
-  <link rel="icon" href="/assets/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision1Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #009688, #2c2c2c);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    section img {
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+    footer {
+      background: #1c1c1c;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">
-        <img src="/assets/logo.png" alt="Vision1Awareness logo" height="48" />
-        <span>Vision1Awareness</span>
-      </a>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn" href="#download">Get the App</a>
-      </nav>
-    </div>
+
+  <!-- Hero Banner -->
+  <header>
+    <h1>Vision1Awareness</h1>
+    <p>The Future of Road Safety. Everywhere. For Everyone.</p>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>See. Hear. React. <span class="accent">Ride-safe awareness</span> for everyone.</h1>
-        <p class="lead">
-          Vision1Awareness helps drivers and riders spot nearby motorcycles with
-          real-time GPS proximity alerts—improving awareness and reducing risk.
-        </p>
-        <div class="cta-row" id="download">
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vision1awareness.app" target="_blank" rel="noopener">
-            Get it on Google Play
-          </a>
-          <a class="btn ghost" href="/privacy-policy.html">Privacy Policy</a>
-        </div>
-        <p class="tiny">Currently in closed testing—public release coming soon.</p>
-      </div>
-      <div class="hero-art">
-        <img src="/assets/hero-phones.png" alt="App preview" />
-      </div>
-    </div>
+  <section id="hero">
+    <img src="assets/images/hero.png" alt="Vision1Awareness Hero">
   </section>
 
-  <section id="features" class="section">
-    <div class="container">
-      <h2>Built for safety, designed for simplicity</h2>
-      <div class="grid features">
-        <div class="card">
-          <h3>Real-time proximity</h3>
-          <p>Detects nearby motorcycles using device GPS signals and shows distance trends at a glance.</p>
-        </div>
-        <div class="card">
-          <h3>Instant alerts</h3>
-          <p>Subtle but timely notifications help drivers notice riders—without adding distraction.</p>
-        </div>
-        <div class="card">
-          <h3>Light & battery-friendly</h3>
-          <p>Efficient location updates and modern Android optimizations keep power use low.</p>
-        </div>
-        <div class="card">
-          <h3>Privacy-first</h3>
-          <p>No ad SDKs. Transparent data practices. You’re in control of permissions at all times.</p>
-        </div>
-      </div>
-    </div>
+  <!-- Feature Highlight -->
+  <section id="features">
+    <h2>Smart Features</h2>
+    <p>Stay aware with real-time GPS alerts, proximity detection, and advanced safety insights.</p>
+    <img src="assets/images/feature.png" alt="Vision1Awareness Features">
   </section>
 
-  <section id="how" class="section alt">
-    <div class="container">
-      <h2>How it works</h2>
-      <ol class="steps">
-        <li><strong>Enable permissions</strong> — Location and notifications for safe, timely alerts.</li>
-        <li><strong>Drive as usual</strong> — The app quietly monitors proximity in the background.</li>
-        <li><strong>Get notified</strong> — When a rider is nearby, you’ll get an awareness nudge.</li>
-      </ol>
-    </div>
+  <!-- Future Vision -->
+  <section id="future">
+    <h2>The Future of Safety</h2>
+    <p>We’re building a connected world where riders, drivers, and pedestrians move safer together.</p>
+    <img src="assets/images/future.png" alt="Vision1Awareness Future Vision">
   </section>
 
-  <section id="future" class="section">
-    <div class="container">
-      <h2>Where we’re headed</h2>
-      <div class="grid future">
-        <div class="card">
-          <h3>Vehicle & helmet integrations</h3>
-          <p>Explore integration with helmet HUDs and in-car systems for seamless alerts.</p>
-        </div>
-        <div class="card">
-          <h3>Community safety signals</h3>
-          <p>Opt-in, anonymized signals to improve aggregated awareness on busy roads.</p>
-        </div>
-        <div class="card">
-          <h3>Cross-platform support</h3>
-          <p>iOS and Android XR support are on the roadmap as we expand.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="section alt">
-    <div class="container">
-      <h2>FAQ</h2>
-      <details>
-        <summary>What data do you collect?</summary>
-        <p>Only the minimum needed for proximity features. See our <a href="/privacy-policy.html">Privacy Policy</a> for details.</p>
-      </details>
-      <details>
-        <summary>Does it work offline?</summary>
-        <p>It relies on GPS and device services—an active signal provides best results.</p>
-      </details>
-      <details>
-        <summary>Will you support iOS?</summary>
-        <p>Yes—on the roadmap. Follow along for updates.</p>
-      </details>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="/assets/logo-mark.png" alt="" height="32" />
-        <span>© <span id="y"></span> Vision1Awareness</span>
-      </div>
-      <div class="footer-right">
-        <a href="/privacy-policy.html">Privacy</a>
-        <a href="mailto:hello@vision1awareness.com">Contact</a>
-      </div>
-    </div>
+  <footer>
+    &copy; 2025 Vision1Awareness. All rights reserved.
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
