@@ -1,76 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vision1Awareness</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision1Awareness – The Future of Safety</title>
+  <link rel="stylesheet" href="./css/styles.css">
   <style>
+    /* Quick inline style for testing, move to css/styles.css later */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f0f0f;
-      color: #fff;
-      text-align: center;
+      color: #f5f5f5;
+      background-color: #121212;
+      line-height: 1.6;
     }
     header {
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #009688, #2c2c2c);
-      color: white;
+      background: #0f2027;
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
     }
     header h1 {
-      font-size: 2.5rem;
       margin: 0;
+      font-size: 2.5rem;
+      color: #00d4d8;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      opacity: 0.9;
+    .hero {
+      background: url("./assets/hero.png") no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      background: rgba(0,0,0,0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
     }
     section {
-      padding: 40px 20px;
+      padding: 3rem 1rem;
+      text-align: center;
     }
     section img {
-      width: 90%;
-      max-width: 1200px;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      max-width: 90%;
+      border-radius: 10px;
+      margin-top: 1rem;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.6);
+    }
+    h2 {
+      color: #00d4d8;
     }
     footer {
-      background: #1c1c1c;
-      padding: 20px;
+      background: #111;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #aaa;
+    }
+    footer a {
+      color: #00d4d8;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Banner -->
+  <!-- HEADER -->
   <header>
+    <img src="./assets/logo-glow.png" alt="Vision1Awareness Logo">
     <h1>Vision1Awareness</h1>
-    <p>The Future of Road Safety. Everywhere. For Everyone.</p>
+    <p>The Future of Safety. Everywhere. For Everyone.</p>
   </header>
 
-  <section id="hero">
-    <img src="assets/images/hero.png" alt="Vision1Awareness Hero">
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Real-time Awareness. Smarter Roads. Safer Communities.</h2>
+  </div>
+
+  <!-- FEATURES -->
+  <section>
+    <h2>Key Features</h2>
+    <p>Vision1Awareness brings cutting-edge safety technology to your fingertips:</p>
+    <ul style="list-style:none; padding:0;">
+      <li>🚦 Real-time GPS-based motorcycle proximity detection</li>
+      <li>📳 Instant alerts for road safety awareness</li>
+      <li>📱 Simple, clean, and intuitive interface</li>
+      <li>🌎 Built for global safety and smart cities</li>
+    </ul>
+    <img src="./assets/feature.png" alt="Vision1Awareness Features">
   </section>
 
-  <!-- Feature Highlight -->
-  <section id="features">
-    <h2>Smart Features</h2>
-    <p>Stay aware with real-time GPS alerts, proximity detection, and advanced safety insights.</p>
-    <img src="assets/images/feature.png" alt="Vision1Awareness Features">
-  </section>
-
-  <!-- Future Vision -->
-  <section id="future">
+  <!-- FUTURE -->
+  <section>
     <h2>The Future of Safety</h2>
-    <p>We’re building a connected world where riders, drivers, and pedestrians move safer together.</p>
-    <img src="assets/images/future.png" alt="Vision1Awareness Future Vision">
+    <p>Our mission is to expand beyond motorcycles — bringing safety awareness to every driver, rider, pedestrian, and emergency response team. Vision1Awareness is the foundation for a smarter, safer tomorrow.</p>
+    <img src="./assets/future.png" alt="The Future of Vision1Awareness">
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Vision1Awareness. All rights reserved.
+    <p>© 2025 Vision1Awareness. All rights reserved.</p>
+    <p><a href="./privacy-policy.html">Privacy Policy</a></p>
   </footer>
 
 </body>
