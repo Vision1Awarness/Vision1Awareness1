@@ -5,98 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vision1Awareness – The Future of Safety</title>
   <link rel="stylesheet" href="./css/styles.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: #f5f5f5;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-    }
-    header img {
-      max-width: 160px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: #00d4d8;
-    }
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-    .banner {
-      background: url("./assets/hero.png") no-repeat center/cover;
-      min-height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    .banner h2 {
-      font-size: 1.8rem;
-      background: rgba(0,0,0,0.6);
-      padding: 1rem;
-      border-radius: 10px;
-    }
-    section {
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    section img {
-      max-width: 90%;
-      border-radius: 10px;
-      margin-top: 1.5rem;
-      box-shadow: 0px 6px 18px rgba(0,0,0,0.6);
-    }
-    h2 {
-      color: #00d4d8;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 0.5rem 0;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #0f2027;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    footer a {
-      color: #00d4d8;
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="./assets/logo-glow.png" alt="Vision1Awareness Logo">
-    <h1>Vision1Awareness</h1>
-    <p>The Future of Safety. Everywhere. For Everyone.</p>
-  </header>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="./assets/logo-glow.png" alt="Vision1Awareness Logo" class="nav-logo">
+      <h1 class="brand">Vision1Awareness</h1>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#future">Future</a></li>
+        <li><a href="./privacy-policy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- BANNER -->
-  <div class="banner">
-    <h2>Real-time Awareness. Smarter Roads. Safer Communities.</h2>
-  </div>
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Vision1Awareness hero">
+    <div class="hero-inner">
+      <h1>Real-time Awareness. Smarter Roads. Safer Communities.</h1>
+      <p class="sub">
+        Proactive proximity detection and instant alerts—built for riders, drivers, and everyone who shares the road.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#features">Explore Features</a>
+        <a class="btn" href="./privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </section>
 
   <!-- FEATURES -->
-  <section>
+  <section id="features">
     <h2>Key Features</h2>
-    <ul>
+    <p>Vision1Awareness brings cutting-edge safety technology to your fingertips:</p>
+    <ul class="features-list">
       <li>🚦 Real-time GPS-based motorcycle proximity detection</li>
       <li>📳 Instant alerts for road safety awareness</li>
       <li>📱 Simple, clean, and intuitive interface</li>
@@ -106,12 +50,11 @@
   </section>
 
   <!-- FUTURE -->
-  <section>
+  <section id="future">
     <h2>The Future of Safety</h2>
     <p>
-      Our mission is to expand beyond motorcycles — bringing safety awareness
-      to every driver, rider, pedestrian, and emergency response team. 
-      Vision1Awareness is the foundation for a smarter, safer tomorrow.
+      Our mission is to expand beyond motorcycles — bringing safety awareness to every driver, rider, pedestrian, and
+      emergency response team. Vision1Awareness is the foundation for a smarter, safer tomorrow.
     </p>
     <img src="./assets/future.png" alt="The Future of Vision1Awareness">
   </section>
