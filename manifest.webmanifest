@@ -1,0 +1,11 @@
+{
+  "name": "Vision1Awareness",
+  "short_name": "V1A",
+  "theme_color": "#0f766e",
+  "background_color": "#0b0f12",
+  "display": "standalone",
+  "icons": [
+    { "src": "/assets/favicon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
